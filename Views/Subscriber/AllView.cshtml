@@ -1,0 +1,35 @@
+﻿@using module_20.Entities
+<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+<html>
+<head>
+    <title>
+        Список абонентов
+    </title>
+</head>
+<body>
+    Список абонентов телефонной книги
+    <div>
+        <table border="1">
+            <tr>
+                <td width=50>№</td>
+                <td width=150>Фамилия</td>
+                <td width=150>Имя</td>
+                <td width=150>Отчество</td>
+
+            </tr>
+            @foreach (Subscriber subs in ViewBag.Subscribers)
+            {
+                <tr>
+                    <td width=50><a href="~/Subscriber/Details/@subs.Id">@subs.Id</a></td>                    
+                    <td width=150>@subs.Surname</td>
+                    <td width=150>@subs.Name</td>
+                    <td width=150>@subs.Patronymic</td>
+
+                </tr>
+            }
+        </table>
+        <br />
+        <a href="/Subscriber/Add" class="btn">Доавить абонента</a>
+    </div>
+</body>
+</html>

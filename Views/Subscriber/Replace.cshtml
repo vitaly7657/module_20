@@ -1,0 +1,39 @@
+﻿@model module_20.Entities.Subscriber
+<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+<html>
+<head>
+    <title>
+        Изменить абонента
+    </title>
+</head>
+<body>
+    Изменить абонента    
+    <div>
+        <form action="~/Subscriber/ReplaceDataFromViewField" method="put">
+            
+            <input hidden type="number" name="id" value="@Model.Id" /><br />         
+            
+            <label>Фамилия</label><br />
+            <input type="text" name="surname" value="@Model.Surname" /><br />
+
+            <label>Имя</label><br />
+            <input type="text" name="name" value="@Model.Name" /><br />
+
+            <label>Отчество</label><br />
+            <input type="text" name="patronymic" value="@Model.Patronymic" /><br />
+
+            <label>Номер телефона</label><br />
+            <input type="text" name="phoneNumber" value="@Model.PhoneNumber" /><br />
+
+            <label>Адрес</label><br />
+            <input type="text" name="address" value="@Model.Address" /><br />
+
+            <label>Описание</label><br />
+            <input type="text" name="description" value="@Model.Description" /><br />
+
+            <p><input type="submit" value="Изменить" /></p>
+        </form>
+    </div>
+</body>
+
+</html>

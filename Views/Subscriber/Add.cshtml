@@ -1,0 +1,33 @@
+﻿<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+
+<head>
+    <title>
+        Добавить абонента
+    </title>
+</head>
+<body>
+    Добавить абонента    
+    <div>
+        <form action="~/Subscriber/GetDataFromViewField" method="post">
+            <label>Фамилия</label><br />
+            <input type="text" name="surname" value="Петров" /><br />
+
+            <label>Имя</label><br />
+            <input type="text" name="name" value="Виктор" /><br />
+
+            <label>Отчество</label><br />
+            <input type="text" name="patronymic" value="Иванович" /><br />
+
+            <label>Номер телефона</label><br />
+            <input type="text" name="phoneNumber" value="+79504856614" /><br />
+
+            <label>Адрес</label><br />
+            <input type="text" name="address" value="адрес" /><br />
+
+            <label>Описание</label><br />
+            <input type="text" name="description" value="описание" /><br />
+
+            <p><input type="submit" value="Добавить" /></p>
+        </form>
+    </div>
+</body>

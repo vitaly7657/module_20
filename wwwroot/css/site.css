@@ -1,0 +1,14 @@
+﻿html {
+    background-color: slategray;
+}
+
+body {
+    margin-bottom: 48px;
+    color: greenyellow;
+    font-size: 24px;
+}
+
+table {
+    background-color: black;
+    border-color: hotpink;
+}

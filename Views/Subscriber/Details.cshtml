@@ -1,0 +1,40 @@
+﻿@model module_20.Entities.Subscriber
+<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+<body>
+    <table border="1">
+        <tr>
+            <th width=50>ID</th>
+            <th width=150>Фамилия</th>
+            <th width=150>Имя</th>
+            <th width=150>Отчество</th>
+            <th width=150>Номер телефона</th>
+            <th width=150>Адрес</th>
+            <th width=150>Описание</th>
+        </tr>
+        <tr>
+            <td width=50>@Model.Id</td>
+            <td width=150>@Model.Surname</td>
+            <td width=150>@Model.Name</td>
+            <td width=150>@Model.Patronymic</td>
+            <td width=150>@Model.PhoneNumber</td>
+            <td width=150>@Model.Address</td>
+            <td width=150>@Model.Description</td>
+        </tr>
+    </table>
+
+
+    <div>
+        <form action="/Subscriber/Delete/@Model.Id" method="post">
+            <p><input type="submit" value="Удалить абонента" /></p>
+        </form>
+
+        <form action="/Subscriber/Replace/@Model.Id" method="post">
+            <p><input type="submit" value="Изменить абонента" /></p>
+        </form>
+
+    </div>
+
+    <a href="/">Вернуться к списку</a>
+
+</body>
+
